@@ -13,3 +13,9 @@ npm install
 #如果网络条件不好的话，可以开启goAgent，执行
 npm install --proxy http://127.0.0.1:8087
 ```
+
+执行以下命令启动server，默认端口是80，如需修改，可以在Gruntfile.js中进行配置
+```
+sudo grunt server
+```
+
