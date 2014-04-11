@@ -11,6 +11,9 @@ app.config(function($routeProvider) {
   }).when('/home', {
     templateUrl: 'views/home.html',
     controller: 'HomeCtrl'
+  }).when('/post', {
+    templateUrl: 'views/post.html',
+    controller: 'PostCtrl'
   }).otherwise({
     redirectTo: '/'
   });
