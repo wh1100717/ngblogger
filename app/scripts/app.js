@@ -2,7 +2,7 @@
 'use strict';
 var app;
 
-app = angular.module('app', ['ngCookies', 'ngResource', 'ngSanitize', 'ngRoute', 'app.directives']);
+app = angular.module('app', ['ngCookies', 'ngResource', 'ngSanitize', 'ngRoute', 'firebase', 'app.directives']);
 
 app.config(function($routeProvider) {
   $routeProvider.when('/', {
@@ -14,6 +14,9 @@ app.config(function($routeProvider) {
   }).when('/post', {
     templateUrl: 'views/post.html',
     controller: 'PostCtrl'
+  }).when('/post/:postId', {
+    templateUrl: 'views/showpost.html',
+    controller: 'PostViewCtrl'
   }).otherwise({
     redirectTo: '/'
   });

@@ -5,6 +5,7 @@ app = angular.module('app', [
     'ngResource',
     'ngSanitize',
     'ngRoute',
+    'firebase',
     'app.directives'
   ])
 app.config ($routeProvider) ->
@@ -22,6 +23,11 @@ app.config ($routeProvider) ->
     '/post',{
       templateUrl: 'views/post.html'
       controller: 'PostCtrl'
+    }
+  ).when(
+    '/post/:postId',{
+      templateUrl: 'views/showpost.html'
+      controller: 'PostViewCtrl'
     }
   ).otherwise(
     redirectTo : '/'

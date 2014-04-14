@@ -25,9 +25,11 @@ app.directive 'enter', ->
 		template: '<a ng-transclude></a>'
 		replace: true
 		transclude: true
-		compile: (element, attrs) ->
+		# compile: (element, attrs) ->
+		compile: (element) ->
 			element.addClass('index-enter')
 			element.addClass('index-enter-inverse')
-		link: (scope, element, attrs) ->
+		# link: (scope, element, attrs) ->
+		link: ->
 			console.log 123
 	}

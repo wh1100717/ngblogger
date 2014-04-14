@@ -10,11 +10,11 @@ app.directive('enter', function() {
     template: '<a ng-transclude></a>',
     replace: true,
     transclude: true,
-    compile: function(element, attrs) {
+    compile: function(element) {
       element.addClass('index-enter');
       return element.addClass('index-enter-inverse');
     },
-    link: function(scope, element, attrs) {
+    link: function() {
       return console.log(123);
     }
   };
